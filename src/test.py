@@ -65,7 +65,7 @@ with torch.no_grad():
         instances = sample['instance'].squeeze()
         
         output = model(im)
-        instance_map, predictions = cluster.cluster(output[0], threshold=0.5)
+        instance_map, predictions = cluster.cluster(output[0], threshold=0.9)
 
         if args['display']:
 

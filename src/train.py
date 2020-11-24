@@ -44,7 +44,7 @@ train_dataset_it = torch.utils.data.DataLoader(
 val_dataset = get_dataset(
     args['val_dataset']['name'], args['val_dataset']['kwargs'])
 val_dataset_it = torch.utils.data.DataLoader(
-    val_dataset, batch_size=args['val_dataset']['batch_size'], shuffle=True, drop_last=True, num_workers=args['train_dataset']['workers'], pin_memory=True if args['cuda'] else False)
+    val_dataset, batch_size=args['val_dataset']['batch_size'], shuffle=True, drop_last=True, num_workers=args['val_dataset']['workers'], pin_memory=True if args['cuda'] else False)
 
 
 # set model

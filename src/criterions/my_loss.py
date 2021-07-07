@@ -88,7 +88,7 @@ class SpatialEmbLoss(nn.Module):
                 # calculate var loss before exp
                 var_loss = var_loss + \
                     torch.mean(
-                        torch.pow(sigma_in - s.detach(), 2))
+                        torch.pow(sigma_in - s[..., 0].detach(), 2))
 
                 s = torch.exp(s*10)
 
